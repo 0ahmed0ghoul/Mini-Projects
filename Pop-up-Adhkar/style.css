@@ -1,0 +1,105 @@
+body {
+    background-color: #544e4e; /* Light grey background */
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.02),
+        rgba(0, 0, 0, 0.02) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    background-size: 5px 5px; /* Controls the size of the noise effect */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrollbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#count-display{
+  top: 20px;
+  position: absolute;
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  height: 40px;
+  gap: 40px;
+}
+#count-display p{
+  font-size: 27px;
+  font-weight: bold;
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  color: white;
+}
+  
+  #bubble-container {
+    position: relative;
+    width: 60%;
+    height: 80%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+
+    overflow: hidden; /* Prevents scrollbar */
+
+  }
+  
+  .bubble {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(135, 206, 250, 0.6); /* Light blue with transparency */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glowing light effect */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    animation: floatUp 7s ease-in-out forwards, sway 3s ease-in-out infinite;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      bottom: 0;
+      opacity: 1;
+    }
+    100% {
+      bottom: 100%;
+      opacity: 0.7;
+    }
+  }
+  @keyframes disa {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes sway {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); } /* Gentle side movement */
+    100% { transform: translateX(0); }
+  }
+  
+  @keyframes pop {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 1; } /* Slight increase in size before pop */
+    100% { transform: scale(0); opacity: 0; } /* Shrink and disappear */
+  }
+
+  @keyframes glowAnimation {
+    0% {
+        color: white;
+        text-shadow: none;
+    }
+    50% {
+        color: gold;
+        text-shadow: 0 0 20px gold, 0 0 30px gold, 0 0 40px gold;
+    }
+    100% {
+        color: white;
+        text-shadow: none;
+    }
+}

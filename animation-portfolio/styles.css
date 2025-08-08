@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    position: relative;
+
+}
+
+.flexbox-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flexbox-item{
+    width: 200px;
+    margin: 10px;
+    flex-shrink: 1;
+
+    border: 3px solid #3ac1b8 ;
+    background-color: #dfdfdf63;
+
+}
+.thin{
+    margin: 10px;
+    width: 100%;
+    height: 50px;
+}
+.square{
+    width: 40%;
+    height: 300px;
+    display: flex;
+    margin:10px ;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #3ac1b8;
+    font-family: monospace;
+    -webkit-text-stroke: 2px black;
+}
+.picture{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    background-image: url('./me.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+@keyframes floatUpDown {
+    0%, 100% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, calc(-50% - 10px));
+    }
+  }
+
+.techs{
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+.tech{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer{
+    background-color: transparent;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+
+.gmail-logo{
+    background-image: url('./logos/gmail.png');
+}
+.linkedin-logo{
+    background-image: url('./logos/linkedin.png');
+}
+.github-logo{
+    background-image: url('./logos/github.png');
+}
+
+.contact,.skills , .gmail-logo, .linkedin-logo, .github-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.gmail-logo ,.linkedin-logo, .github-logo{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+}
+
+.gmail-logo:hover ,.linkedin-logo:hover, .github-logo:hover{
+    opacity: 1;
+    transition:  0.2s ease-in-out;
+
+}
+.contact{
+    user-select: none;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    background-color: red;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+.skills{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+    left: 20px;
+    user-select: none;
+    z-index: 1;
+
+}
+.contact-container{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    width: 40px;
+    height: 50px;
+    transition:  0.6s ease;
+
+}
+.skill-container{
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    overflow: hidden;
+    width: 40px;
+    height: 50px;
+    transition:  0.6s ease;
+}
+.problemsolving, .leadership, .fastlearning, .persuasion{
+    opacity: 0;
+    width: fit-content;
+    height: 30px;
+    padding: 2px 3px;
+    background-color: #3ac1b8;
+    border-radius: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition:  0.6s ease;
+    overflow: hidden;
+}

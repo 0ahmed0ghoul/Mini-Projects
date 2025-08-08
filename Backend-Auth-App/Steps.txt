@@ -1,0 +1,99 @@
+Steps :
+
+1- mkdir auth-App 
+   cd auth-App
+   npm init -y
+   npm i express cors mongoose cookie-parser Joi jsonwebsockets bcryptjs crypto nodemailer
+==========================================================================================
+2- add those scripts to package.json:
+   "start":"node --env-file=.env index.js",
+   "dev": "node --watch --trace-warnings --env-file=.env index.js"
+==========================================================================================
+3- create index.js and import express cors cookie-parser mongoose  
+    -create an express server 
+==========================================================================================
+4- create .env file :
+ 	PORT = 8000	
+==========================================================================================
+5- create .gitignore : .env
+
+==========================================================================================
+
+6- create user in mongoDb Atlas : extract MONGO_URI and put it in .env 
+
+==========================================================================================
+
+7- connect to database : mongoose.connect(process.env.MONGO_URI)
+
+==========================================================================================
+
+8- create project structure:
+  routers folder      ==> For routes ('/route',controller.function )
+  controlllers folder ==> For routes functions
+  middlewares folder  ==> For middlewares (identification , sendMail , validator)
+  models folder       ==> for database models(schemas)
+  utils folder        ==> For needed functions (hashing)
+
+==========================================================================================
+
+9- create models : in routers folder create postsModel.js and usersModel.js
+   create Models : userSchema (email,password,...)postsSchema(title,description,...)with mongoose
+
+===========================================================================================
+
+10 - create schemas: in middlewares folder create validator.js
+  create schemas : signupSchema , signinSchema ... for validation with Joi
+
+==========================================================================================
+
+11- create routes : in routers folder create authRouter.js
+  const router = express.Router();
+  router.post('/signup',(req,res)=>{})
+
+==========================================================================================
+
+12- create routes's controllers :  in controllers folder create authControllers.js
+   create signup , signin , logout , ...
+
+===========================================================================================
+
+13- create hashing function to use in the signup route : in utils folder
+
+===========================================================================================
+
+
+13- create identification , sendMail   middlewares : in middlewares folder 
+   connect identification function it with routes that need user idetification like '/logout'
+and sendMail function with '/send-verification-code'
+
+==========================================================================================
+
+14 - add to .enf file :
+ 	TOKEN_SECRET, 
+	NODE_CODE_SENDING_EMAIL_ADDRESS, 
+	NODE_CODE_SENDING_EMAIL_PASSWORD,
+	HMAC_VERIFICATION_CODE_SECRET
+use cases :      from: process.env.NODE_CODE_SENDING_EMAIL_ADDRESS,(send verification Code)
+		 process.env.HMAC_VERIFICATION_CODE_SECRET  for hmac process(hashing)
+
+==========================================================================================
+14- connect controllers amd middlewares with routes :
+          router.post('/logout',identification,authController.signup)
+
+==========================================================================================
+
+15- create postRouter.js :
+	add routes to it :'/all-posts','/single-post','/create-post'
+
+==========================================================================================
+
+16- create postControllers.js :
+	add functions :getPosts,getSinglePost,createPost,UpdatePost,deletePost
+
+==========================================================================================
+
+17 - connect controllers with routes :router.get('/all-posts',postsController.getPosts)
+ also middlewares : router.put('/update-post',identifier,postsController.UpdatePost)
+
+==========================================================================================
+

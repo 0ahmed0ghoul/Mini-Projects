@@ -1,0 +1,114 @@
+body{box-sizing: border-box;padding: 0;margin: 0;background-color:rgb(55,4,4);color: rgb(255,255,204);}
+.container{display: flex;flex-direction: column;height: 720px;}
+
+.header{width: 100%;height: 60px;border: 2px solid rgb(255,255,204);text-align: center;font-family: 'Amiri';display: flex;align-items: center;justify-content: center;}
+
+.container{flex: 1;border:2px solid rgb(255,255,204);border-radius: 5px;}
+
+.side-bar{width: 25%;border-right: 4px solid rgb(255,255,204);height: 100%;font-family: 'Amiri';text-align: center;}
+
+
+.search-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+#search {width: 80%;height: 50px;display: flex;justify-content: space-evenly;}
+#search input{width: 100%;height: 100%;border-radius: 35px;border: 3px solid rgb(163,182,198);}
+#search img{position: absolute;left: 300px;top: 173px;}
+
+.res-container{display: flex;justify-content: center;align-items: center;margin-bottom: 10px;}
+.res{width: 200px;height: 200px;border: 2px solid grey;overflow-y: scroll;}
+.buttons{display: flex;justify-content: center;align-items: center;}
+
+#show{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 145px;
+    bottom: 300px;
+    width: 100px;
+    height: 40px;
+    font-size: 24px;
+    font-family: 'Amiri';
+    border-radius: 20px;
+    background-color: rgb(255,255,204);
+}
+#show:hover{
+    background-color: rgb(160, 129, 108);
+    cursor: pointer;
+}
+.safha{
+    height: 605;
+    width: 500px;
+    border: 5px solid rgb(255,255,204);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 85px;
+    right: 300px;
+
+}
+#title{background-color: rgba(255, 255, 204, 0.47);display: block;position: absolute;bottom: 100;left: 5px;padding: 5px;width: 24%;}
+#img-safha{
+    display: none;
+    height:605px;
+    width: 500px;
+}
+#surah_name{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 2px solid rgba(128, 128, 128, 0.482);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.492);
+}
+
+select{
+    width:50%;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+    background-color: rgb(255,255,204);
+}
+#result{
+    font-size: larger;
+    font-family: 'Amiri';
+    font-size: 22px;
+    font-weight: bolder;
+}
+#sp1{
+    font-size: 27px;
+    color: white;
+    font-weight: bolder;
+}
+#before{
+    right: 100px;
+    border-radius: 0 20px 20px 0; /* Top-left and bottom-left corners */
+
+}
+#after{
+    left: 500px;
+    border-radius: 20px 0 0 20px; /* Top-left and bottom-left corners */
+
+}
+
+#after,#before{
+    position: absolute;
+    top: 350px;
+    width: 100px;
+    height: 40px;
+    font-size: 24px;
+    font-family: 'Amiri';
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255,255,204);    
+}
+
+

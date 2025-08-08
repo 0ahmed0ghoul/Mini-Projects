@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(143, 101, 45);
+}
+.title_div{
+    width: 100%;
+    height: 90px;
+    border-bottom: 3px double wheat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+    font-family: 'Amiri', sans-serif; 
+    font-size: 50px;
+}
+.sourat{
+    width: 1420px;
+    display: flex;
+    flex-direction: row; /* This is the default value */
+    justify-content: space-between; /* Optional: space out the headings */
+}
+.sourat h1{
+    font-family: 'Amiri', sans-serif; 
+    flex: 1; /* Optional: make headings take equal space */
+    text-align: center; /* Optional: center-align the text */
+}
+.div_numbers{
+    position: absolute;
+    right: 0;
+    height: 344px;
+    width: 50px
+}
+.div_numbers h1{
+    text-align: center;
+    color: black;
+    border: 1px solid wheat;
+    margin: 5px;
+    padding: 0;
+    font-size: medium;
+    font-family: 'Cairo', sans-serif; 
+}
+.line{
+    flex: 1; /* All items will take up equal space */
+    direction: rtl;
+    margin: 0;
+    height: max-content;
+    width: 170px;
+    
+}
+.line h1{
+    text-align: center;
+    font-family: 'Cairo', sans-serif; 
+    font-size: medium;
+    border: 1px solid wheat;
+    font-weight: bolder;
+    padding-right: 15px;
+    margin: 5px;
+    color: black;
+    background: rgba(128, 128, 128, 0.7);
+}
+.line h1:hover{color:white;}
+.lines{
+    width: 1415px;
+    display: flex;
+    flex-direction: row; /* Default value; items will be placed in a row */
+}
+a {text-decoration: none;}

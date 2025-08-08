@@ -1,0 +1,298 @@
+body{
+    background-color: rgb(32, 32, 33);}
+.title{
+    height: 130px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+ul {
+    display: flex;
+    list-style: none;
+    position: absolute; /* Positioned relative to the .image-container */
+    top: 45px; /* Aligns the overlay at the top of the container */
+    left: 37%;}
+ul li {
+    font-family: 'Russo One', sans-serif;
+    font-size: 80px;
+    color: #f5f5f5;
+    text-shadow: #fff 0.006em 0.006em 0.007em,
+                    #9c9c9c 1px 1px 1px,
+                    #9c9c9c 1px 2px 1px,
+                    #9c9c9c 1px 3px 1px,
+                    #9c9c9c 1px 4px 1px,
+                    #9c9c9c 1px 5px 1px,
+                    #9c9c9c 1px 6px 1px,
+                    #9c9c9c 1px 7px 1px,
+                    #9c9c9c 1px 8px 1px,
+                    #9c9c9c 1px 9px 1px,
+                    #9c9c9c 1px 10px 1px,
+                    #9c9c9c 1px 11px 1px,
+                    #9c9c9c 1px 12px 1px,
+                    rgba(16,16,16,0.4) 1px 18px 6px,
+                    rgba(16,16,16,0.4) 1px 22px 10px,
+                    rgba(16,16,16,0.4) 1px 26px 35px,
+                    rgba(16,16,16,0.4) 1px 30px 65px,
+                    #fff -0.5em -0.1em 100px;
+    animation: ani 1s infinite ease-in-out;
+    animation-delay: calc(.1s * var(--i));}
+
+@keyframes ani {
+    0%, 100% {
+        margin-top: 0;
+        text-shadow: #fff 0.006em 0.006em 0.007em,
+                    #9c9c9c 1px 1px 1px,
+                    #9c9c9c 1px 2px 1px,
+                    #9c9c9c 1px 3px 1px,
+                    #9c9c9c 1px 4px 1px,
+                    #9c9c9c 1px 5px 1px,
+                    #9c9c9c 1px 6px 1px,
+                    #9c9c9c 1px 7px 1px,
+                    #9c9c9c 1px 8px 1px,
+                    #9c9c9c 1px 9px 1px,
+                    #9c9c9c 1px 10px 1px,
+                    #9c9c9c 1px 11px 1px,
+                    #9c9c9c 1px 12px 1px,
+                    rgba(16,16,16,0.4) 1px 18px 6px,
+                    rgba(16,16,16,0.4) 1px 22px 10px,
+                    rgba(16,16,16,0.4) 1px 26px 35px,
+                    rgba(16,16,16,0.4) 1px 30px 65px,
+                    #fff -0.5em -0.1em 100px;
+    }
+
+    50% {
+        margin-top: -20px;
+        text-shadow: #fff 0.006em 0.006em 0.007em,
+                    #9c9c9c 1px 1px 1px,
+                    #9c9c9c 1px 2px 1px,
+                    #9c9c9c 1px 3px 1px,
+                    #9c9c9c 1px 4px 1px,
+                    #9c9c9c 1px 5px 1px,
+                    #9c9c9c 1px 6px 1px,
+                    #9c9c9c 1px 7px 1px,
+                    #9c9c9c 1px 8px 1px,
+                    #9c9c9c 1px 9px 1px,
+                    #9c9c9c 1px 10px 1px,
+                    #9c9c9c 1px 11px 1px,
+                    #9c9c9c 1px 12px 1px,
+                    rgba(16,16,16,0.4) 1px 38px 26px,
+                    rgba(16,16,16,0.4) 1px 42px 30px,
+                    rgba(16,16,16,0.4) 1px 46px 65px,
+                    rgba(16,16,16,0.4) 1px 50px 95px,
+                    #fff -0.5em -0.1em 100px;
+    }}
+
+.shuri{
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    animation: /*moveRectangle 5s infinite*/slide 5s linear infinite, roll 1s infinite linear;
+    filter: drop-shadow(5px 5px 20px #1479EA); /* Green glow */
+    transition: filter 0.3s ease-in-out;
+    transform: translateY(-50%);}
+
+@keyframes roll {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }}
+@keyframes slide {
+    0% {
+        left: -100px; /* Start from outside the left of the container */
+        opacity: 0; /* Start invisible */
+    }
+    5% {
+        opacity: 1; /* Become visible quickly */
+    }
+    50%{opacity: 0; /* Start invisible */}
+    6%{opacity: 1; /* Become visible quickly */}
+    95% {
+        opacity: 1; /* Stay visible for most of the animation */
+    }
+    100% {
+        left: 100%; /* Move to the right side */
+        opacity: 0; /* Fade out when leaving the right side */
+    }}
+/* @keyframes moveRectangle {
+    0% { top: 0; left: 100px; }
+    25% { top: 0; left: 1240px; }
+    50% { top: 900px; left: 1240px;filter: drop-shadow(5px 5px 30px #ffffff); }
+    75% { top: 900px; left: 100px; }
+    100% { top: 0; left: 100px;filter: drop-shadow(5px 5px 30px #1479EA); }
+} */
+/* @keyframes moveCenterDiv {
+    0%, 50% { top: 150px; }
+    25% { top: 200px; }
+    75% { top: 130px; }
+} */
+/* #hr1{
+    border: 0;
+    height: 2px; 
+    background-color: #fff; 
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #00ffff,
+                0 0 20px #2600ff, 
+                0 0 30px #0051ff; 
+} */
+
+.content{
+    width: 100%; /* Set the width to 100% of the viewport width */
+    min-height: 1010px;
+    position: relative; /* Ensure .content is a reference point for .shuri */
+    overflow: hidden; /* Ensures the div disappears when it moves out of view */
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.in-content{
+    width: 800px;
+    height: fit-content;
+    border: 2px solid;
+    background-color: #3b3b3b23; /* Button color */
+    border: 2px solid #2e2e2e; /* Border color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 2px 2px 5px #1479EA, -2px -2px 5px #ffffff; /* Bevel effect */
+    border-radius: 5px; /* Rounded corners */
+    transition: box-shadow 0.2s; /* Smooth transition for hover effect */
+    animation: moveCenterDiv 10s infinite linear;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+/* Define the keyframes for the fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.achive,.langs,.skills,.contact,.hobbies,.frameworks {
+    width: 99%;
+    height: 100px; /* Use max-height to control the initial height */
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #999999, -2px -2px 5px #ffffff;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+    outline: none;
+    overflow: hidden;
+    font-weight: bold;
+    opacity: 0; /* Start with hidden */
+    transform: scale(0.8); /* Start with a smaller size */
+    animation: fadeIn 0.5s ease forwards; /* Animation with keyframes */
+    position: relative; /* Required for the pseudo-element */
+    transition: height 0.5s ease;
+    }
+/* Hover effect for a radial gradient */
+
+.achive:hover,.langs:hover,.skills:hover,.contact:hover,.hobbies:hover,.frameworks:hover{
+    border-color: #666666;
+    box-shadow: inset 0px 0px 15px #1479EA;
+}
+.hidden{
+    display:flex;
+    padding-left: 45px;
+}
+.d1 {
+    height: 150px;
+    width: 80px;
+    margin-left: 50px;
+}
+
+.skill-bar {
+height: 8px;
+width: 80%;
+border-radius: 6px;
+background: rgba(236, 236, 236, 0.1);
+}
+  
+.skill-bar .skill-per {
+position: relative;
+display: block;
+height: 100%;
+width: 90%;
+border-radius: 6px;
+background: rgb(226, 226, 226);
+opacity: 0;
+} 
+.move{
+    animation: progress 2s ease-in-out forwards;
+}
+.skill-per.html {
+    width: 50%;
+    animation-delay: 0.2s;
+}
+.skill-per.css {
+    width: 40%;
+    animation-delay: 0.2s;
+} 
+.skill-per.js {
+    width: 20%;
+    animation-delay: 0.2s;
+}
+.skill-per.java {
+    width: 10%;
+    animation-delay: 0.2s;
+}
+.skill-per.python {
+    width: 30%;
+    animation-delay: 0.2s;
+}
+
+@keyframes progress {
+0% {
+    width: 0;
+    opacity: 1;
+}
+
+100% {
+    opacity: 1;
+}
+} 
+.skill-per .tooltip {
+position: absolute;
+right: -14px;
+top: -28px;
+font-size: 9px;
+font-weight: 500;
+color: rgb(0, 0, 0);
+font-weight: bold;
+padding: 2px 6px;
+border-radius: 3px;
+background: rgb(226, 226, 226);
+z-index: 1;
+}
+.tooltip::before {
+content: "";
+position: absolute;
+left: 50%;
+bottom: -2px;
+height: 10px;
+width: 10px;
+z-index: -1;
+background-color: rgb(226, 226, 226);
+transform: translateX(-50%) rotate(45deg);
+}
+  

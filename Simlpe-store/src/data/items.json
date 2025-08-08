@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "name": "Item 1",
+        "price": 100,
+        "imgUrl": "https://via.placeholder.com/150"
+    },
+    {
+        "id": 2,
+        "name": "Item 2",
+        "price": 200,
+        "imgUrl": "https://via.placeholder.com/151"
+
+    },
+    {
+        "id": 3,
+        "name": "Item 3",
+        "price": 300,
+        "imgUrl": "https://via.placeholder.com/152"
+
+    },
+    {
+        "id": 4,
+        "name": "Item 4",
+        "price": 400,
+        "imgUrl": "https://via.placeholder.com/153"
+
+    },
+    {
+        "id": 5,
+        "name": "Item 5",
+        "price": 500,
+        "imgUrl": "https://via.placeholder.com/15"
+
+    }
+]

@@ -1,0 +1,51 @@
+ga => 20GahmedA05
+
+wsl.exe -d Ubuntu
+
+ sudo systemctl start redis
+sudo systemctl stop redis
+
+sudo systemctl enable redis
+sudo systemctl restart redis
+
+redis-cli ping
+redis-cli
+
+127.0.0.1:6379> hset user1 name alice age 28 loyalty_points 1500   ==>(integer) 3
+
+127.0.0.1:6379> hset user2 name bob age 35 loyalty_points 2300    ==>(integer) 3
+
+127.0.0.1:6379> hgetall user1
+1) "name"
+2) "alice"
+3) "age"
+4) "28"
+5) "loyalty_points"
+6) "1500"
+
+127.0.0.1:6379> hget user2 email   ==>(nil)
+
+127.0.0.1:6379> hget user2 name   ==>"bob"
+
+127.0.0.1:6379> hget user2 age   ==>"35"
+
+127.0.0.1:6379> hincrby user1 loyalty_points 500    ==>(integer) 2000
+
+127.0.0.1:6379> lpush reviews_p_2 "excellent build quality" "fast shipping" "great value for the price"   ==>(integer) 3
+
+127.0.0.1:6379> lrange reviews_p_2 1 2
+1) "fast shipping"
+2) "excellent build quality"
+
+127.0.0.1:6379> sadd elec "tablet" "laptop" smartphone    ==>(integer) 3
+
+127.0.0.1:6379> sadd home_ap "refrigerator" "washing machine" " microwave"   ==>(integer) 3
+
+127.0.0.1:6379> sinter home_ap elec   ==>(empty array)
+127.0.0.1:6379> sunion home_ap elec
+1) "refrigerator"
+2) " microwave"
+3) "washing machine"
+4) "tablet"
+5) "laptop"
+6) "smartphone"

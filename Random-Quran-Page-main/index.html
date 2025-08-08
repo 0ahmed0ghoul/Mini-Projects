@@ -1,0 +1,134 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Pages</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"><h1 >Random Quran safha</h1></div>
+      
+      <div class="container">
+        <div class="side-bar">
+          <h1>اختر السورة</h1>
+            <select id="sura" onchange="checkSelection()">
+              <option value="" disabled selected>اختر سورة</option>
+              <!-- <option value="الفاتحة">الفاتحة</option>
+              <option value="البقرة">البقرة</option>
+              <option value="آل عمران">آل عمران</option>
+              <option value="النساء">النساء</option>
+              <option value="المائدة">المائدة</option>
+              <option value="الأنعام">الأنعام</option>
+              <option value="الأعراف">الأعراف</option>
+              <option value="الأنفال">الأنفال</option>
+              <option value="التوبة">التوبة</option>
+              <option value="يونس">يونس</option>
+              <option value="هود">هود</option>
+              <option value="يوسف">يوسف</option>
+              <option value="الرعد">الرعد</option>
+              <option value="إبراهيم">إبراهيم</option>
+              <option value="الحجر">الحجر</option>
+              <option value="النحل">النحل</option>
+              <option value="الإسراء">الإسراء</option> -->
+              <option value="18">الكهف</option>
+              <option value="19">مريم</option>
+              <option value="20">طه</option>
+              <option value="21">الأنبياء</option>
+              <option value="22">الحج</option>
+              <option value="23">المؤمنون</option>
+              <option value="24">النور</option>
+              <option value="25">الفرقان</option>
+              <option value="26">الشعراء</option>
+              <option value="27">النمل</option>
+              <option value="28">القصص</option>
+              <option value="29">العنكبوت</option>
+              <option value="30">الروم</option>
+              <option value="31">لقمان</option>
+              <option value="32">السجدة</option>
+              <option value="33">الأحزاب</option>
+              <option value="34">سبأ</option>
+              <option value="35">فاطر</option>
+              <option value="36">يس</option>
+              <option value="37">الصافات</option>
+              <option value="38">ص</option>
+              <option value="39">الزمر</option>
+              <option value="40">غافر</option>
+              <option value="41">فصلت</option>
+              <option value="42">الشورى</option>
+              <option value="43">الزخرف</option>
+              <option value="44">الدخان</option>
+              <option value="45">الجاثية</option>
+              <option value="46">الأحقاف</option>
+              <option value="47">محمد</option>
+              <option value="48">الفتح</option>
+              <option value="49">الحجرات</option>
+              <option value="50">ق</option>
+              <option value="51">الذاريات</option>
+              <option value="52">الطور</option>
+              <option value="53">النجم</option>
+              <option value="54">القمر</option>
+              <option value="55">الرحمن</option>
+              <option value="56">الواقعة</option>
+              <option value="57">الحديد</option>
+              <option value="58">المجادلة</option>
+              <option value="59">الحشر</option>
+              <option value="60">الممتحنة</option>
+              <option value="61">السجدة</option>
+              <option value="62">التحريم</option>
+              <option value="63">الملك</option>
+              <option value="64">القلم</option>
+              <option value="65">المعارج</option>
+              <option value="66">نوح</option>
+              <option value="67">الجن</option>
+              <option value="68">المُزمل</option>
+              <option value="69">المدثر</option>
+              <option value="70">القيامة</option>
+              <option value="71">الإنسان</option>
+              <option value="72">المرسلات</option>
+              <option value="73">النبأ</option>
+              <option value="74">النازعات</option>
+              <option value="75">عبس</option>
+              <option value="76">التكوير</option>
+              <option value="77">الانفطار</option>
+              <option value="78">المطففين</option>
+              <option value="79">الانشقاق</option>
+              <option value="80">البروج</option>
+              <option value="81">الطارق</option>
+              <option value="82">الأعلى</option>
+              <option value="83">الغاشية</option>
+              <option value="84">الفجر</option>
+              <option value="85">البلد</option>
+              <option value="86">الشمس</option>
+              <option value="87">الليل</option>
+              <option value="88">الضحى/الشرح</option>
+              <option value="89">التين/العلق</option>
+              <option value="90">القدر/البينة</option>
+              <option value="91">الزلزلة/العاديات</option>
+              <option value="92">القارعة/التكاثر</option>
+              <option value="93">العصر/الهُمَزَة/الفيل</option>
+              <option value="94">قريش/الماعون/الكوثر</option>
+              <option value="95">الكافرون/النصر/المسد</option>
+              <option value="96">الإخلاص/الفلق/الناس</option>
+          </select>
+          <p id="result"></p>
+          <button onclick="onClick()" id="show">اظهار</button>
+          <h3 id="title">الصفحة رقم</h3>
+          </div>
+          <button id="before" onclick="before()">ما قبلها</button>
+
+          <div class="safha">
+              <img src="" alt="" id="img-safha">
+          </div>
+          <button id="after" onclick="after()">ما بعدها</button>
+
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

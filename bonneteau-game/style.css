@@ -1,0 +1,17 @@
+#btn0, #btn1, #btn2 {
+    height: 100px;
+    background-color: gray;
+    width: 50px;
+    margin: 5px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+div h3 {
+    text-align: center;
+}
